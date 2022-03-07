@@ -6,6 +6,7 @@ TagManager:
   tags:
   - breakable
   - enemy
+  - npc
   layers:
   - Default
   - TransparentFX
@@ -46,9 +47,9 @@ TagManager:
   - name: Gegner
     uniqueID: 2231202159
     locked: 0
-  - name: Player
-    uniqueID: 929281447
-    locked: 0
   - name: Npc
     uniqueID: 2010525269
+    locked: 0
+  - name: Player
+    uniqueID: 929281447
     locked: 0
