@@ -39,7 +39,12 @@ public class Treant : Enemy
                 changeAnim(temp - transform.position);
                 myRigidbody.MovePosition(temp);
                 ChangeState(EnemyState.walk);
+                anim.SetBool("moving", true);
             }
+        }
+        else
+        {
+            anim.SetBool("moving", false);
         }
     }
 
