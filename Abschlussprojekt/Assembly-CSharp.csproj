@@ -59,6 +59,8 @@
     <Compile Include="Assets\Scripts\Knockback.cs" />
     <Compile Include="Assets\Scripts\Treant.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\pot.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\FloatValue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Skills\readme.txt" />
