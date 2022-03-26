@@ -9,18 +9,18 @@ public class Signal : ScriptableObject
 
     public void Raise()
     {
-        for (int i = listeners.Count-1; i >= 0; i--)
+        for (int i = listeners.Count - 1; i >= 0; i--)  //Solange i größer oder gleich 0 ist
         {
-            listeners[i].OnSignalRaised();
+            listeners[i].OnSignalRaised();              //Beim Objekt am Index i wird .OnSignalRaised() aufgerufen 
         }
     }
 
-    public void RegisterListener(SignalListener listener)
+    public void RegisterListener(SignalListener listener)   //Add-Methode für listeners
     {
         listeners.Add(listener);
     }
 
-    public void DeRegisterListener(SignalListener listener)
+    public void DeRegisterListener(SignalListener listener) //Remove-Methode für listeners
     {
         listeners.Remove(listener);
     }

@@ -59,11 +59,11 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\npcBehavior.cs" />
     <Compile Include="Assets\Scripts\Knockback.cs" />
+    <Compile Include="Assets\Scripts\SignalListener.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\FloatValue.cs" />
     <Compile Include="Assets\Scripts\Treant.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Signal.cs" />
-    <Compile Include="Assets\Scripts\SignalListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Skills\readme.txt" />

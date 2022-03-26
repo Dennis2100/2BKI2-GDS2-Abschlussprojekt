@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PlayerState
+public enum PlayerState //Definition der verschiedenen Statuse
 {
     walk,
     attack,
@@ -50,12 +50,12 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator AttackCo()
     {
-        animator.SetBool("attacking", true);
-        currentState = PlayerState.attack;
+        animator.SetBool("attacking", true);    //Animation für Angriff wird aktiviert
+        currentState = PlayerState.attack;      //Status wird auf Angriff gesetzt
         yield return null;
-        animator.SetBool("attacking", false);
+        animator.SetBool("attacking", false);   //Animation für Angriff wird deaktiviert
         yield return new WaitForSeconds(.3f);
-        currentState = PlayerState.walk;
+        currentState = PlayerState.walk;        //Status wird auf Laufen gesetzt
     }
 
     void UpdateAnimationAndMove()
@@ -65,32 +65,32 @@ public class PlayerMovement : MonoBehaviour
             MoveCharacter();
             animator.SetFloat("moveX", change.x);
             animator.SetFloat("moveY", change.y);
-            animator.SetBool("moving", true);
+            animator.SetBool("moving", true);   //Animation für das Laufen wird aktiviert
         }
         else
         {
-            animator.SetBool("moving", false);
+            animator.SetBool("moving", false);  //Animation für das Laufen wird deaktiviert
         }
     }
 
     void MoveCharacter()
     {
         change.Normalize();
-        myRigidbody.MovePosition(transform.position + change * speed * Time.deltaTime);
+        myRigidbody.MovePosition(transform.position + change * speed * Time.deltaTime); //Weite der Bewegung wird ermittelt
     }
 
     public void Knock(float knockTime, float damage)
     {
-        currentHealth.RuntimeValue -= damage;
-        playerHealthSignal.Raise();
+        currentHealth.RuntimeValue -= damage;   //Der Schaden wird vom derzeitigen Gesundheitsstand abgezogen
+        //playerHealthSignal.Raise();             //playerHealthSignal sendet ein Signal an .Raise()
 
-        if (currentHealth.RuntimeValue > 0)
+        if (currentHealth.RuntimeValue > 0)     //Wenn die derzeitige Gesundheitsanzeige über 0 liegt
         {
-            StartCoroutine(KnockCo(knockTime));
+            StartCoroutine(KnockCo(knockTime)); //KnockCo() wird aufgerufen
         }
         else
         {
-            this.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);   //Spieler wird deaktiviert
         }
     }
 

@@ -29,8 +29,7 @@ public class Treant : Enemy
 
     void CheckDistance()
     {
-        if(Vector3.Distance(target.position, transform.position) <= chaseRadius
-           && Vector3.Distance(target.position, transform.position) > attackRadius)
+        if(Vector3.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius)
         {
             if (currentState == EnemyState.idle || currentState == EnemyState.walk && currentState != EnemyState.stagger)
             {

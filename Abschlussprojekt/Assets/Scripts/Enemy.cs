@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     public int baseAttack;
     public float moveSpeed;
 
-    private void Awake()
+    void Start()
     {
         health = maxHealth.initialValue;
     }
@@ -32,7 +32,6 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             this.gameObject.SetActive(false);
-            
         }
     }
 

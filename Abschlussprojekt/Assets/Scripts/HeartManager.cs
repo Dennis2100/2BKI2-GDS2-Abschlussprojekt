@@ -16,20 +16,26 @@ public class HeartManager : MonoBehaviour
     void Start()
     {
         InitHearts();
+        playerCurrentHealth.RuntimeValue = playerCurrentHealth.initialValue;
+    }
+
+    void Update()
+    {
+        UpdateHearts();
     }
 
     public void InitHearts()
     {
-        for (int i = 0; i < heartContainer.initialValue; i++)
+        for (int i = 0; i < heartContainer.initialValue; i++)   //Solange i kleiner als der initialValue der heartContainer ist
         {
-            hearts[i].gameObject.SetActive(true);
-            hearts[i].sprite = fullHeart;
+            hearts[i].gameObject.SetActive(true);               //Das GameObjekt am Index i wird aktiviert
+            hearts[i].sprite = fullHeart;                       //Das Sprite wird auf das ausgefüllte Herz gesetzt
         }
     }
 
     public void UpdateHearts()
     {
-        float tempHealth = playerCurrentHealth.RuntimeValue / 2;
+        float tempHealth = playerCurrentHealth.RuntimeValue / 2;    //tempHealth wird der RunTimeValue vom playerCurrentHealth zugewiesen, es wird /2 gemacht da wir mit halben Herzen arbeiten
 
         for (int i = 0; i < heartContainer.initialValue; i++)
         {

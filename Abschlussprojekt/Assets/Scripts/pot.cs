@@ -20,13 +20,13 @@ public class pot : MonoBehaviour
 
     public void Smash()
     {
-        anim.SetBool("smash", true);
-        StartCoroutine(breakCo());
+        anim.SetBool("smash", true);    //Animnation zum Zerstören wird aktiviert
+        StartCoroutine(breakCo());      //Methoden aufruf von breakCo
     }
 
     IEnumerator breakCo()
     {
         yield return new WaitForSeconds(.5f);
-        this.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);   //Der Pot wird deaktiviert
     }
 }

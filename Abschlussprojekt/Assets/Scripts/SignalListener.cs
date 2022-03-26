@@ -10,16 +10,16 @@ public class SignalListener : MonoBehaviour
 
     public void OnSignalRaised()
     {
-        signalEvent.Invoke();
+        signalEvent.Invoke();   //Führt das angegebene Event aus
     }
 
     private void OnEnable()
     {
-        signal.RegisterListener(this);
+        signal.RegisterListener(this);  //Fügt dieses Objekt der Generischen-Liste in Signal hinzu
     }
 
-    private void Disable()
+    private void OnDisable()
     {
-        signal.DeRegisterListener(this);
+        signal.DeRegisterListener(this);    //Enfernt dieses Objekt in der Generischen-Liste in Signal
     }
 }
