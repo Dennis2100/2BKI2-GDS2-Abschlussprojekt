@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class FloatValue : ScriptableObject, ISerializationCallbackReceiver
 {
+    public float masterValue;
     public float initialValue;
 
     //[HideInInspector]

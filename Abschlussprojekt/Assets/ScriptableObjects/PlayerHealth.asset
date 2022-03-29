@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a774949427aad5646ba0160da76b6c7b, type: 3}
   m_Name: PlayerHealth
   m_EditorClassIdentifier: 
+  masterValue: 6
   initialValue: 6
-  RuntimeValue: 3
+  RuntimeValue: 6

@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\Treant.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Signal.cs" />
+    <Compile Include="Assets\Scripts\Heart.cs" />
+    <Compile Include="Assets\Scripts\HeartContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Skills\readme.txt" />
