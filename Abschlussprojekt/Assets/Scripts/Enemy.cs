@@ -20,6 +20,9 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+    public GameObject coin;
+    public GameObject death;
+    public Animator anim;
 
     void Start()
     {
@@ -31,8 +34,26 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            CoinDrop();
+            //Death();
             this.gameObject.SetActive(false);
         }
+    }
+
+    /*private void Death()
+    {
+        anim.SetBool("death", true);
+    }*/
+
+    private void CoinDrop()
+    {
+        coin = Instantiate(coin, transform.position, Quaternion.identity);
+        coin.SetActive(true);
+
+        /*if(coin != null)
+        {
+            GameObject drop = Instantiate(coin, transform.position, Quaternion.identity);
+        }*/
     }
 
     public void Knock(Rigidbody2D myRigidbody, float knockTime, float damage)

@@ -9,6 +9,7 @@ public class npcBehavior : MonoBehaviour
     public Text dialogText;
     public string dialog;
     public bool playerInRange;
+    public GameObject coinManager;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +25,11 @@ public class npcBehavior : MonoBehaviour
             if (dialogBox.activeInHierarchy)
             {
                 dialogBox.SetActive(false);                 //Dialogbox ist deaktiviert
+                coinManager.SetActive(true);
             }
             else
             {
+                coinManager.SetActive(false);
                 dialogBox.SetActive(true);                  //Dialogbox ist aktiviert
                 dialogText.text = dialog;
             }
@@ -47,6 +50,7 @@ public class npcBehavior : MonoBehaviour
         {
             playerInRange = false;
             dialogBox.SetActive(false); //Dialogbox wird deaktiviert
+            coinManager.SetActive(true);
         }
     }
 }

@@ -19,6 +19,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 change;
     private Animator animator;
     public FloatValue currentHealth;
+    public GameObject shop;
+    public GameObject dialog;
+    public GameObject inventory;
+    public IntValue numberOfHealthPotions;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         animator.SetFloat("moveX", 0);
         animator.SetFloat("moveY", -1);
+        numberOfHealthPotions.initialValue = numberOfHealthPotions.masterValue;
+        numberOfHealthPotions.RuntimeValue = numberOfHealthPotions.initialValue;
     }
 
     // Update is called once per frame
@@ -37,13 +43,34 @@ public class PlayerMovement : MonoBehaviour
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetMouseButtonDown(0) && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        if (Input.GetMouseButtonDown(0) && currentState != PlayerState.attack && currentState != PlayerState.stagger && dialog.activeInHierarchy == false && shop.activeInHierarchy == false)
         {
             StartCoroutine(AttackCo());
         }
+        /*else if (Input.GetButton("archer"))
+        {
+            Debug.Log("Yes");
+        }*/
         else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
             UpdateAnimationAndMove();
+        }
+
+        if (Input.GetKeyUp(KeyCode.F) && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        {
+            OpenInventory();
+        }
+    }
+
+    private void OpenInventory()
+    {
+        if (inventory.activeInHierarchy)
+        {
+            inventory.SetActive(false);                 //Dialogbox ist deaktiviert
+        }
+        else
+        {
+            inventory.SetActive(true);                  //Dialogbox ist aktiviert
         }
     }
 

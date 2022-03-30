@@ -9,7 +9,7 @@ public class Treant : Enemy
     public float chaseRadius;
     public float attackRadius;
     public Transform homePosition;
-    public Animator anim;
+    //public Animator anim;
 
 
     // Start is called before the first frame update
