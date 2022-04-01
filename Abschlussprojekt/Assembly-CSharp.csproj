@@ -73,6 +73,10 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Signal.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
+    <Compile Include="Assets\Scripts\XPBar.cs" />
+    <Compile Include="Assets\Scripts\XP.cs" />
+    <Compile Include="Assets\Scripts\playerDamageBoost.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\BoolValue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Skills\readme.txt" />
