@@ -5,6 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public IntValue Coins;
+    public bool beenActivated;
 
     // Start is called before the first frame update
     void Start()
@@ -14,8 +15,9 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && beenActivated == false)
         {
+            beenActivated = true;
             this.gameObject.SetActive(false);
             Coins.RuntimeValue += 10;
         }
