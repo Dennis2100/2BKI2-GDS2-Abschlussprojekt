@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject inventory;
     public IntValue numberOfHealthPotions;
     public VectorValue startingPosition;
+    public GameObject abilityIcon;
+    public GameObject coinDisplay;
 
     // Start is called before the first frame update
     void Start()
@@ -70,10 +72,14 @@ public class PlayerMovement : MonoBehaviour
         if (inventory.activeInHierarchy)
         {
             inventory.SetActive(false);                 //Dialogbox ist deaktiviert
+            abilityIcon.SetActive(true);
+            coinDisplay.SetActive(true);
         }
         else
         {
             inventory.SetActive(true);                  //Dialogbox ist aktiviert
+            abilityIcon.SetActive(false);
+            coinDisplay.SetActive(false);
         }
     }
 

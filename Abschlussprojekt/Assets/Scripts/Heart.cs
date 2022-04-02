@@ -19,6 +19,10 @@ public class Heart : MonoBehaviour
             {
                 currentHealth.RuntimeValue += 2;
             }
+            else if ((hearts.RuntimeValue * 2) >= currentHealth.RuntimeValue + 1)
+            {
+                currentHealth.RuntimeValue += 1;
+            }
         }
     }
 }
