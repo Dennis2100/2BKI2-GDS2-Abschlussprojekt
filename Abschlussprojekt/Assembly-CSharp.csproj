@@ -73,13 +73,13 @@
     <Compile Include="Assets\Scripts\HeartContainer.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\BoolValue.cs" />
     <Compile Include="Assets\Scripts\XPBar.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\StringValue.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\IntValue.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\VectorValue.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\FloatValue.cs" />
     <Compile Include="Assets\Scripts\Treant.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\StringValue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Skills\readme.txt" />
