@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     public GameObject coin;
     public GameObject death;
     public Animator anim;
+    public IntValue killed;
 
     void Start()
     {
@@ -37,6 +38,7 @@ public class Enemy : MonoBehaviour
             CoinDrop();
             //Death();
             this.gameObject.SetActive(false);
+            killed.RuntimeValue++;
         }
     }
 
