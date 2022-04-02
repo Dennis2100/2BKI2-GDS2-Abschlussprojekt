@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject dialog;
     public GameObject inventory;
     public IntValue numberOfHealthPotions;
+    public VectorValue startingPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("moveY", -1);
         numberOfHealthPotions.initialValue = numberOfHealthPotions.masterValue;
         numberOfHealthPotions.RuntimeValue = numberOfHealthPotions.initialValue;
+        //startingPosition.initialValue = startingPosition.masterValue;
+        transform.position = startingPosition.initialValue;
     }
 
     // Update is called once per frame

@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\buyableItem.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\playerDamageBoost.cs" />
     <Compile Include="Assets\Scripts\HealthPotion.cs" />
     <Compile Include="Assets\Scripts\HeartManager.cs" />
     <Compile Include="Assets\Scripts\Coin.cs" />
@@ -65,18 +66,19 @@
     <Compile Include="Assets\Scripts\HealthPotionInventory.cs" />
     <Compile Include="Assets\Scripts\Knockback.cs" />
     <Compile Include="Assets\Scripts\coinUpdater.cs" />
+    <Compile Include="Assets\Scripts\XP.cs" />
     <Compile Include="Assets\Scripts\SignalListener.cs" />
     <Compile Include="Assets\Scripts\HeartContainer.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\BoolValue.cs" />
+    <Compile Include="Assets\Scripts\XPBar.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\IntValue.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\FloatValue.cs" />
     <Compile Include="Assets\Scripts\Treant.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Signal.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
-    <Compile Include="Assets\Scripts\XPBar.cs" />
-    <Compile Include="Assets\Scripts\XP.cs" />
-    <Compile Include="Assets\Scripts\playerDamageBoost.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\BoolValue.cs" />
+    <Compile Include="Assets\Scripts\SceneTransition.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\VectorValue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Skills\readme.txt" />

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class XPBar : MonoBehaviour
 {
     public Slider slider;
-    public float Fillspeed = 0;
     public float targetPosition = 0;
     public FloatValue add;
     public IntValue lvl;
@@ -42,7 +41,7 @@ public class XPBar : MonoBehaviour
     {
         if (slider.value < targetPosition)
         {
-            slider.value += Fillspeed * Time.deltaTime;
+            slider.value += Time.deltaTime * 6f;
         }
 
         if (slider.value == 1)
