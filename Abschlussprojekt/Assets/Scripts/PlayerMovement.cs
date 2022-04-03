@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public VectorValue startingPosition;
     public GameObject abilityIcon;
     public GameObject coinDisplay;
+    public GameObject npcTalk;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetMouseButtonDown(0) && currentState != PlayerState.attack && currentState != PlayerState.stagger && dialog.activeInHierarchy == false && shop.activeInHierarchy == false)
+        if (Input.GetMouseButtonDown(0) && currentState != PlayerState.attack && currentState != PlayerState.stagger && dialog.activeInHierarchy == false && shop.activeInHierarchy == false && npcTalk.activeInHierarchy == false)
         {
             StartCoroutine(AttackCo());
         }
