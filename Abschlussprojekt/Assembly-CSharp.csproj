@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Treant.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
+    <Compile Include="Assets\Scripts\TutorialScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Skills\readme.txt" />
