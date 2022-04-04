@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\HeartManager.cs" />
     <Compile Include="Assets\Scripts\Coin.cs" />
     <Compile Include="Assets\Scripts\pot.cs" />
+    <Compile Include="Assets\Scripts\TutorialScript.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\npcBehavior.cs" />
     <Compile Include="Assets\Scripts\shopNPC.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Assets\Scripts\Treant.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
-    <Compile Include="Assets\Scripts\TutorialScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\Skills\readme.txt" />
